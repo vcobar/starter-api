@@ -1,0 +1,37 @@
+jwt: 
+  expiration: 604800
+  header: Authorization
+  route: 
+    authentication: 
+      path: auth
+      refresh: refresh
+  secret: mySecret
+
+server: 
+  contextPath: /api
+  port: 8080
+  sessionTimeout: 30
+
+spring: 
+  application: 
+    name: starter-api
+  datasource: 
+    driverClassName: org.postgresql.Driver
+    password: 5t@rt3r!
+    url: "jdbc:postgresql://localhost:5432/hpna_aux_development"
+    username: starter_user
+  jackson: 
+    serialization: 
+      INDENT_OUTPUT: true
+  jpa: 
+    hibernate: 
+      ddl-auto: update
+    properties: 
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl: 
+          auto: update
+    show-sql: true
+  security:
+    key: 5k3l3t0n
+
